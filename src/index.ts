@@ -46,7 +46,7 @@ app.post('/register', async (req, res) => {
 
   try {
     const hashed_password = hashSync(password, salt);
-    // Generate random id and push to in memory users
+    
     const id = Math.random().toString(36).substr(2, 9);
     const user = {
       id,
@@ -55,7 +55,7 @@ app.post('/register', async (req, res) => {
     };
     USERS.push(user);
 
-    // Create user in Stream Chat
+    
     await client.upsertUser({
       id,
       email,
