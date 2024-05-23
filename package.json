@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon",
-    "build": "npm install && rimraf ./build && tsc",
+    "build": "npm install && rm -rf ./build && tsc",
     "start": "node build/index.js "
   },
   "keywords": [],
